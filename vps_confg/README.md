@@ -14,7 +14,7 @@
 
 	ssserver -c /etc/shadowsocks.json -d start
 		
-	-c CONFIG              path to config file`<br>
+	-c CONFIG              path to config file<br>
 	-d start/stop/restart  daemon mode`
 
 执行`ps -ef|grep shadowsocks`，可见后台进程。
