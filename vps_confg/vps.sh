@@ -15,7 +15,7 @@ git version || yum -y install git
 git clone https://github.com/shadowsocks/shadowsocks.git && cd shadowsocks && python setup.py install
 if [[ ! -f /etc/shadowsocks.json ]]
 then
-    su -c "mv ~/shadowsocks.json /etc/shadowsocks.json" #以root身份执行该条命
+    su -c "mv ./shadowsocks.json /etc/shadowsocks.json" #以root身份执行该条命
 fi
 
 ssserver -c /etc/shadowsocks.json -d start  #以守护进程开启后台运行
