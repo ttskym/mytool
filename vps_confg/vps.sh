@@ -12,7 +12,8 @@ if [[ ! -z $sopt ]]
 then
 ## shadowsocks configuration
 git version || yum -y install git
-git clone https://github.com/shadowsocks/shadowsocks.git && cd shadowsocks && python setup.py install
+#git clone https://github.com/shadowsocks/shadowsocks.git && cd shadowsocks && python setup.py install
+cd ../shadowsocks && python setup.py install
 if [[ ! -f /etc/shadowsocks.json ]]
 then
     su -c "mv ./shadowsocks.json /etc/shadowsocks.json" #以root身份执行该条命
