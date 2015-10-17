@@ -16,8 +16,7 @@ git version || yum -y install git
 cd ../shadowsocks && python setup.py install
 if [[ ! -f /etc/shadowsocks.json ]]
 then
-    su -c "cp shadowsocks.json /etc/"
-    #su -c "cp shadowsocks.json /etc/shadowsocks.json" #以root身份执行该条命
+    su -c "cp ../vps_config/shadowsocks.json /etc/shadowsocks.json" #以root身份执行该条命
 fi
 
 ssserver -c /etc/shadowsocks.json -d start  #以守护进程开启后台运行
@@ -34,7 +33,7 @@ if [[ ! -z $popt ]]
 then
 ## PPTP configuration
 
-yum -y install pptp || apt-get -y install pptp
+#yum -y install pptpd || apt-get -y install pptpd
 
 ppp_pptp=/etc/ppp/pptpd-options   #不同发行版的该文件名称不同
 if [[ ! -z $ppp_pptp ]]
