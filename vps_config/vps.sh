@@ -65,7 +65,7 @@ sed -i 's/^net.ipv4.icmp_ignore_bogus_error_responses.*/net.ipv4.icmp_ignore_bog
 
 
 echo "lion pptpd lion123 *" |tee -a /etc/ppp/chap-secrets
-myIP=$(hostname -I)
+myIP=$(hostname -I|cut -f1 -d " ")
 iptables -F 
 iptables -t nat -A POSTROUTING -j SNAT --to-source $myIP -o eth+
 iptables -A INPUT -p tcp -m tcp --dport 1723 -j ACCEPT
