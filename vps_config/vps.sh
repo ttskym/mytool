@@ -34,7 +34,7 @@ then
 ## PPTP configuration
 
 #yum -y install pptpd || apt-get -y install pptpd
-
+rpm -ivh pptpd_vps
 ppp_pptp=/etc/ppp/pptpd-options   #不同发行版的该文件名称不同
 if [[ ! -z $ppp_pptp ]]
 then
@@ -69,7 +69,7 @@ myIP=$(hostname -I)
 iptables -F 
 iptables -t nat -A POSTROUTING -j SNAT --to-source $myIP -o eth+
 iptables -A INPUT -p tcp -m tcp --dport 1723 -j ACCEPT
-service iptables save
+iptables-save
 
 for vpn in /proc/sys/net/ipv4/conf/*; do echo 0 > $vpn/accept_redirects; echo 0 > $vpn/send_redirects; done
 sysctl -p
