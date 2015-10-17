@@ -33,8 +33,8 @@ if [[ ! -z $popt ]]
 then
 ## PPTP configuration
 
-#yum -y install pptpd || apt-get -y install pptpd
-rpm -Uvh pptpd_vps
+rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum -y install pptpd || apt-get -y install pptpd
 ppp_pptp=/etc/ppp/pptpd-options   #不同发行版的该文件名称不同
 if [[ ! -z $ppp_pptp ]]
 then
