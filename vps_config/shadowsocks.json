@@ -1,9 +1,12 @@
 {
 "server":"0.0.0.0",
-"server_port":8899,
 "local_address": "127.0.0.1",
 "local_port":9988,
-"password":"Li0nss1234",
+"port_password":{
+    "8899":"Li0nss1234",
+    "8898":"Li0nss1234",
+    "8897":"Li0nss1234"
+},
 "timeout":300,
 "method":"aes-256-cfb",
 "fast_open": false,
