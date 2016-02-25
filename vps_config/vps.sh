@@ -33,7 +33,6 @@ if [[ ! -z $popt ]]
 then
 ## PPTP configuration
 
-rpm -i http://poptop.sourceforge.net/yum/stable/rhel6/pptp-release-current.noarch.rpm
 yum -y install pptpd || apt-get -y install pptpd
 ppp_pptp=/etc/ppp/pptpd-options   #不同发行版的该文件名称不同
 if [[ ! -z $ppp_pptp ]]
