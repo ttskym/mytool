@@ -1,6 +1,6 @@
-###vps 初始化配置
+### vps 初始化配置
 
-###Shadowsocks Server配置
+### Shadowsocks Server配置
 
 [shadowsocks github 主页](https://github.com/shadowsocks),包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本[Server版本](https://github.com/shadowsocks/shadowsocks)
 
@@ -21,7 +21,7 @@
 
 将ssserver启动脚本添加进/etc/rc.local，重启后可自动启动。
 
-###PPTP Server配置
+### PPTP Server配置
 
 安装pptpd后，配置/etc/ppp/pptpd-options(options.pptpd)，/etc/pptpd.conf及/etc/ppp/chap-secrets三个文件。
 
