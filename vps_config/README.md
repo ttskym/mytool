@@ -8,7 +8,7 @@
   
 	git clone https://github.com/shadowsocks/shadowsocks.git && python setup.py install
 	
-在/etc目录*(此目录非强制，放在该目录下只是遵循惯例)*创建配置文件(shadowsocks.json)或将准备好的配置文件拷贝此处。配置参数请参考[基本配置范例](http://shadowsocks.org/en/config/quick-guide.html)
+在/etc目录(此目录非强制，放在该目录下只是遵循惯例)创建配置文件(shadowsocks.json)或将准备好的配置文件拷贝此处。配置参数请参考[基本配置范例](http://shadowsocks.org/en/config/quick-guide.html)
 
 以后台守护进程模式指定配置文件启动程序。
 
